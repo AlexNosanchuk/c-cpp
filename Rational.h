@@ -1,6 +1,3 @@
-// task 10.4
-
-//#pragma once
 #ifndef _RATIONAL_H_
 #define _RATIONAL_H_
 
@@ -21,9 +18,9 @@ extern void outputRational(Rational x);
 
 extern Rational addRational(Rational x, Rational y);
 
-extern Rational multRational(Rational x, Rational y);
+extern Rational multRational(Rational x,Rational y);
 
-extern bool cmpRational(Rational x, Rational y);
+extern bool cmpRational(Rational x,Rational y);
 
 extern void reduceRational(Rational* x);
 
