@@ -1,4 +1,3 @@
-//Задача CSV , Статистики-2 , Якименко
 #include "CSV.h"
     void DinArr_Simple::CopyDinArr_Simple(DinArr_Simple& l) {
         //cout << "Copy constructor ...";
@@ -185,7 +184,7 @@
             return 0;
         }
         return 1;
-    };//Додаємо об'єкти 
+    };
     bool CSV::insert(string value, int pos) {
         try {
             DinArr_Simple* temp = new DinArr_Simple[size + 1];
@@ -226,7 +225,7 @@
         }
         return 1;
 
-    };////Видаляємо лінію , вказавши номер лініЇ k
+    };
     DinArr_Simple& CSV::operator[](int pos) {
         return Line[pos];
     }
@@ -239,7 +238,7 @@
             };
         };
         return s;
-    }//Повернення значення за заголовком і номером рядка
+    }/
     void CSV::LoadFromFile(string filename) {
         ifstream file(filename, ios::in);
         if (!Line && file)delete[] Line;
@@ -249,7 +248,7 @@
             add(s);
         }
 
-    };//Завантаження з файлу
+    };
     void CSV::SaveToFile(string filename) {
         ofstream file(filename, ios::out);
         if (file) {
@@ -258,7 +257,7 @@
             };
         };
         file.close();
-    };//Збереження в файл
+    };
     void CSV::print() {
         // cout << "Printing ...";
         for (int i = 0; i < size; i++) {
@@ -266,7 +265,7 @@
             Line[i].print();
             cout << endl;
         }
-    };//Виведення результату 
+    };
 
     CSV::~CSV() {
         delete[] Line;
